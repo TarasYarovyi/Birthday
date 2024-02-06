@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script>
+      mocha.setup("bdd");
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+  </head>
+
+  <body>
+    <script>
+      function testGift() {
+        return "Delightful";
+      }
+
+      let assert = chai.assert;
+
+      describe("How does it taste?", () => {
+        it("Delightful", () => {
+          assert.equal(testGift(), "Delightful");
+        });
+      });
+    </script>
+
+    <div id="mocha"></div>
+
+    <script>
+      mocha.run();
+    </script>
+  </body>
+</html>
